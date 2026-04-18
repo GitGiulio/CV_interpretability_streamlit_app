@@ -200,7 +200,7 @@ else:
         fill_color="rgba(255, 0, 0, 0.3)",
         stroke_width=32,
         stroke_color="rgba(255, 0, 0, 0.3)",
-        background_image=image,
+        background_image=image.copy(),
         width=width,
         height=height,
         drawing_mode="freedraw",
