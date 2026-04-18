@@ -13,7 +13,7 @@ import os
 
 REAL_IMAGE_DIR = Path("./images/REAL")
 AI_IMAGE_DIR = Path("./images/AI")
-MASK_DIR = Path("masks")
+MASK_DIR = Path("./masks")
 RESULTS_FILE = "results.csv"
 
 MASK_DIR.mkdir(exist_ok=True)
@@ -191,6 +191,10 @@ else:
     st.write(f"Image {st.session_state.idx - st.session_state.starting_index} / {len(st.session_state.all_image_paths)}")
 
     st.subheader("1️⃣ Highlight regions important for your decision")
+
+
+    st.write(image_path)
+    st.write(image.size)
 
     canvas = st_canvas(
         fill_color="rgba(255, 0, 0, 0.3)",
